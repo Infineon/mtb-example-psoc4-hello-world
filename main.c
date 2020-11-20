@@ -4,10 +4,10 @@
 * Description: This is the source code for the PSoC 4 MCU Hello World Example
 *              for ModusToolbox.
 *
-* Related Document: See Readme.md
+* Related Document: See README.md
 *
 *******************************************************************************
-* Copyright (2019-2020), Cypress Semiconductor Corporation. All rights reserved.
+* (c) 2020, Cypress Semiconductor Corporation. All rights reserved.
 *******************************************************************************
 * This software, including source code, documentation and related materials
 * ("Software"), is owned by Cypress Semiconductor Corporation or one of its
@@ -47,11 +47,21 @@
 
 
 /*******************************************************************************
+* Macros
+*******************************************************************************/
+#define LED_DELAY_MS              (500u)
+#define CY_ASSERT_FAILED          (0u)
+
+
+/*******************************************************************************
 * Function Name: main
 ********************************************************************************
 * Summary:
-* This is the main function. It demonstrates blinking a LED under firmware
-* control and periodically prints Hello World via UART.
+*  System entrance point. This function performs
+*  - initial setup of device
+*  - configure the SCB block as UART interface
+*  - prints out "Hello World" via UART interface
+*  - Blinks an LED under firmware control at 1 Hz
 *
 * Parameters:
 *  none
@@ -71,7 +81,7 @@ int main(void)
     /* Board init failed. Stop program execution */
     if (result != CY_RSLT_SUCCESS)
     {
-        CY_ASSERT(0);
+        CY_ASSERT(CY_ASSERT_FAILED);
     }
 
     /* Configure and enable the UART peripheral */
@@ -81,15 +91,18 @@ int main(void)
     /* Enable global interrupts */
     __enable_irq();
 
-    for(;;)
-    {
-        /* Send a string over serial terminal */
+    /* Send a string over serial terminal */
         Cy_SCB_UART_PutString(CYBSP_UART_HW, "Hello world\r\n");
 
+    for(;;)
+    {
         /* Toggle the user LED state */
         Cy_GPIO_Inv(CYBSP_USER_LED1_PORT, CYBSP_USER_LED1_PIN);
 
         /* Wait for 0.5 seconds */
-        Cy_SysLib_Delay(500);
+        Cy_SysLib_Delay(LED_DELAY_MS);
     }
 }
+
+/* [] END OF FILE */
+
