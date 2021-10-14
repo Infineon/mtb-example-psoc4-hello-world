@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Design version="12" device_library_hint_path="../../../../../../mtw/mtb_shared/mtb-pdl-cat2/latest-v1.X/devicesupport.xml" xmlns="http://cypress.com/xsd/cydesignfile_v3">
-    <ToolInfo version="2.2.0.2801"/>
+    <ToolInfo version="2.4.0.5947"/>
     <Devices>
         <Device mpn="CY8C4146AZI-S433">
             <BlockConfig>
@@ -519,6 +519,15 @@
                 <Block location="srss[0].clock[0].sysclk[0]">
                     <Personality template="m0s8sysclk" version="1.0">
                         <Param id="divider" value="1"/>
+                    </Personality>
+                </Block>
+                <Block location="srss[0].power[0]">
+                    <Personality template="m0s8power" version="1.0">
+                        <Param id="idlePwrMode" value="CY_CFG_PWR_MODE_DEEPSLEEP"/>
+                        <Param id="deepsleepLatency" value="0"/>
+                        <Param id="vddaMv" value="5000"/>
+                        <Param id="vdddMv" value="5000"/>
+                        <Param id="AmuxPumpEn" value="false"/>
                     </Personality>
                 </Block>
             </BlockConfig>
