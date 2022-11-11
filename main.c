@@ -7,7 +7,7 @@
 * Related Document: See README.md
 *
 *******************************************************************************
-* Copyright 2020-2021, Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2020-2022, Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
 * This software, including source code, documentation and related
@@ -91,7 +91,7 @@ int main(void)
     __enable_irq();
 
     /* Send a string over serial terminal */
-        Cy_SCB_UART_PutString(CYBSP_UART_HW, "Hello world\r\n");
+    Cy_SCB_UART_PutString(CYBSP_UART_HW, "Hello world\r\n");
 
     for(;;)
     {
