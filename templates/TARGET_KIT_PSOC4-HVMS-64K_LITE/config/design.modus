@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration app="BACKEND" formatVersion="14" lastSavedWith="Configurator Backend" lastSavedWithVersion="3.50.0" toolsPackage="ModusToolbox 3.5.0" xmlns="http://cypress.com/xsd/cydesignfile_v5">
+<Configuration app="BACKEND" formatVersion="15" lastSavedWith="Configurator Backend" lastSavedWithVersion="3.70.0" toolsPackage="ModusToolbox 3.7.0" xmlns="http://cypress.com/xsd/cydesignfile_v7">
     <Devices>
         <Device mpn="CY8C4146LWE-HVS115X">
             <BlockConfig>
@@ -206,13 +206,13 @@
                         <Alias value="CYBSP_SHIELD0"/>
                     </Aliases>
                 </Block>
-                <Personality template="m0s8dap" version="1.0">
+                <Personality template="m0s8dap" version="1.0" instance="MVI8iUcyJVM">
                     <Block location="cpuss[0].dap[0]" locked="true"/>
                     <Parameters>
                         <Param id="dbgMode" value="SWD"/>
                     </Parameters>
                 </Personality>
-                <Personality template="m0s8pin" version="2.0">
+                <Personality template="m0s8pin" version="2.0" instance="j-cVF-VY-Kc">
                     <Block location="ioss[0].port[0].pin[7]" locked="true">
                         <Aliases>
                             <Alias value="CYBSP_USER_LED"/>
@@ -234,7 +234,7 @@
                         <Param id="vtrip" value="CY_GPIO_VTRIP_CMOS"/>
                     </Parameters>
                 </Personality>
-                <Personality template="m0s8pin" version="2.0">
+                <Personality template="m0s8pin" version="2.0" instance="QFYOYs72k4U">
                     <Block location="ioss[0].port[1].pin[4]" locked="true">
                         <Aliases>
                             <Alias value="CYBSP_SWDCK"/>
@@ -250,7 +250,7 @@
                         <Param id="vtrip" value="CY_GPIO_VTRIP_CMOS"/>
                     </Parameters>
                 </Personality>
-                <Personality template="m0s8pin" version="2.0">
+                <Personality template="m0s8pin" version="2.0" instance="rIE0s3ikVFQ">
                     <Block location="ioss[0].port[1].pin[5]" locked="true">
                         <Aliases>
                             <Alias value="CYBSP_SWDIO"/>
@@ -266,7 +266,7 @@
                         <Param id="vtrip" value="CY_GPIO_VTRIP_CMOS"/>
                     </Parameters>
                 </Personality>
-                <Personality template="m0s8pin" version="2.0">
+                <Personality template="m0s8pin" version="2.0" instance="yBhQScaEpqI">
                     <Block location="ioss[0].port[4].pin[0]" locked="true">
                         <Aliases>
                             <Alias value="CYBSP_MSC0_CMOD1"/>
@@ -282,7 +282,7 @@
                         <Param id="vtrip" value="CY_GPIO_VTRIP_CMOS"/>
                     </Parameters>
                 </Personality>
-                <Personality template="m0s8pin" version="2.0">
+                <Personality template="m0s8pin" version="2.0" instance="RUBmO57qSuw">
                     <Block location="ioss[0].port[5].pin[0]" locked="true">
                         <Aliases>
                             <Alias value="CYBSP_UART_TX"/>
@@ -305,7 +305,7 @@
                         <Param id="vtrip" value="CY_GPIO_VTRIP_CMOS"/>
                     </Parameters>
                 </Personality>
-                <Personality template="m0s8pin" version="2.0">
+                <Personality template="m0s8pin" version="2.0" instance="KxbVMlRAqg4">
                     <Block location="ioss[0].port[5].pin[1]" locked="true">
                         <Aliases>
                             <Alias value="CYBSP_UART_RX"/>
@@ -328,7 +328,7 @@
                         <Param id="vtrip" value="CY_GPIO_VTRIP_CMOS"/>
                     </Parameters>
                 </Personality>
-                <Personality template="m0s8peripheralclock" version="1.0">
+                <Personality template="m0s8peripheralclock" version="1.0" instance="0GSl6QaGcDQ">
                     <Block location="peri[0].div_16[0]" locked="true"/>
                     <Parameters>
                         <Param id="calc" value="man"/>
@@ -338,7 +338,7 @@
                         <Param id="startOnReset" value="true"/>
                     </Parameters>
                 </Personality>
-                <Personality template="m0s8peripheralclock" version="1.0">
+                <Personality template="m0s8peripheralclock" version="1.0" instance="HRBQrPM4py8">
                     <Block location="peri[0].div_16[1]" locked="true"/>
                     <Parameters>
                         <Param id="calc" value="man"/>
@@ -348,7 +348,7 @@
                         <Param id="startOnReset" value="true"/>
                     </Parameters>
                 </Personality>
-                <Personality template="m0s8uart" version="1.0">
+                <Personality template="m0s8uart" version="1.0" instance="CaqgirbcKiQ">
                     <Block location="scb[1]" locked="true">
                         <Aliases>
                             <Alias value="CYBSP_UART"/>
@@ -400,36 +400,36 @@
                         <Param id="inFlash" value="true"/>
                     </Parameters>
                 </Personality>
-                <Personality template="m0s8sysclocks" version="2.0">
+                <Personality template="m0s8sysclocks" version="2.0" instance="hLbpMu2Ps4Y">
                     <Block location="srss[0].clock[0]" locked="true"/>
                 </Personality>
-                <Personality template="m0s8hfclk" version="3.0">
+                <Personality template="m0s8hfclk" version="3.0" instance="4PEXg56CHM4">
                     <Block location="srss[0].clock[0].hfclk[0]" locked="true"/>
                     <Parameters>
                         <Param id="divider" value="1"/>
                         <Param id="sourceClock" value="IMO"/>
                     </Parameters>
                 </Personality>
-                <Personality template="m0s8imo" version="1.0">
+                <Personality template="m0s8imo" version="1.0" instance="mtFZzCo-VDE">
                     <Block location="srss[0].clock[0].imo[0]" locked="true"/>
                     <Parameters>
                         <Param id="frequency" value="48000000"/>
                         <Param id="trim" value="2"/>
                     </Parameters>
                 </Personality>
-                <Personality template="m0s8pumpclk" version="2.0">
+                <Personality template="m0s8pumpclk" version="2.0" instance="fpp_E8WckEY">
                     <Block location="srss[0].clock[0].pumpclk[0]" locked="true"/>
                     <Parameters>
                         <Param id="sourceClock" value="IMO"/>
                     </Parameters>
                 </Personality>
-                <Personality template="m0s8sysclk" version="1.0">
+                <Personality template="m0s8sysclk" version="1.0" instance="OpI4lkS1Wro">
                     <Block location="srss[0].clock[0].sysclk[0]" locked="true"/>
                     <Parameters>
                         <Param id="divider" value="1"/>
                     </Parameters>
                 </Personality>
-                <Personality template="m0s8power" version="1.0">
+                <Personality template="m0s8power" version="1.0" instance="TuXKHKK2yts">
                     <Block location="srss[0].power[0]" locked="true"/>
                     <Parameters>
                         <Param id="AmuxPumpEn" value="false"/>
